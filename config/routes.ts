@@ -61,6 +61,24 @@
   },
 
   {
+    path: '/quan-ly',
+    name: 'Quản lý cửa hàng',
+    icon: 'shop', // Nếu dự án có dùng icon
+    routes: [
+      {
+        path: '/quan-ly/products',
+        name: 'Quản lý Sản phẩm',
+        component: './products', // Nó sẽ trỏ vào src/pages/products.tsx
+      },
+      {
+        path: '/quan-ly/orders',
+        name: 'Quản lý Đơn hàng',
+        component: './orders', // Nó sẽ trỏ vào src/pages/orders.tsx
+      },
+    ],
+  },
+
+  {
     path: '/notification',
     routes: [
       {
