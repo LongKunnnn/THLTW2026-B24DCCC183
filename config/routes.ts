@@ -63,18 +63,28 @@
   {
     path: '/quan-ly',
     name: 'Quản lý cửa hàng',
-    icon: 'shop', // Nếu dự án có dùng icon
+    icon: 'shop', 
     routes: [
       {
         path: '/quan-ly/products',
         name: 'Quản lý Sản phẩm',
-        component: './products', // Nó sẽ trỏ vào src/pages/products.tsx
+        component: './products',
       },
       {
         path: '/quan-ly/orders',
         name: 'Quản lý Đơn hàng',
-        component: './orders', // Nó sẽ trỏ vào src/pages/orders.tsx
+        component: './orders', 
       },
+      {
+        path: '/quan-ly/game',
+        name: 'Trò chơi Đoán số',
+        component: './game', 
+      },
+      {
+        path: '/quan-ly/study-management',
+        name: 'Quản lý Học tập',
+        component: './studymanagement', 
+      }
     ],
   },
 
