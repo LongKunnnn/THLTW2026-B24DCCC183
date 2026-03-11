@@ -84,6 +84,16 @@
         path: '/quan-ly/study-management',
         name: 'Quản lý Học tập',
         component: './studymanagement', 
+      },
+      {
+        path: '/quan-ly/oantuti',
+        name: 'Game Oẳn tù tì',
+        component: './oantuti', 
+      },
+      {
+        path: '/quan-ly/studymanagement2',
+        name: 'Quản lý Học tập 2',
+        component: './studymanagement2', 
       }
     ],
   },
