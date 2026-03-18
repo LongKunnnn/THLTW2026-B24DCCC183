@@ -94,6 +94,11 @@
         path: '/quan-ly/studymanagement2',
         name: 'Quản lý Học tập 2',
         component: './studymanagement2', 
+      },
+      {
+        path: '/quan-ly/bookingmanagement',
+        name: 'Quản lý Đặt lịch',
+        component: './bookingmanagement', 
       }
     ],
   },
