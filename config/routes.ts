@@ -106,6 +106,11 @@ export default [
 				name: 'Quản lý Văn bằng',
 				component: './DiplomaManagement',
 			},
+			{
+				path: '/quan-ly/club-management',
+				name: 'Quản lý CLB',
+				component: './ClubManagement',
+			},
 		],
 	},
 
