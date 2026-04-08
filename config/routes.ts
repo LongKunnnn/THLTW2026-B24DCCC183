@@ -111,6 +111,11 @@ export default [
 				name: 'Quản lý CLB',
 				component: './ClubManagement',
 			},
+			{
+				path: '/quan-ly/travel-planner',
+				name: 'Lập kế hoạch du lịch',
+				component: './TravelPlanner',
+			},
 		],
 	},
 
