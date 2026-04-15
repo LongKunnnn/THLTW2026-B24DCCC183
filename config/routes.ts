@@ -116,6 +116,11 @@ export default [
 				name: 'Lập kế hoạch du lịch',
 				component: './TravelPlanner',
 			},
+			{
+				path: '/quan-ly/order-management',
+				name: 'Quản lý Đơn hàng',
+				component: './OderManagement',
+			},
 		],
 	},
 
