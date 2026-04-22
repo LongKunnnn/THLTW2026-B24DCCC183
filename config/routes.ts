@@ -121,6 +121,11 @@ export default [
 				name: 'Quản lý Đơn hàng',
 				component: './OderManagement',
 			},
+			{
+				path: '/quan-ly/personalblog',
+				name: 'Blog cá nhân',
+				component: './PersonalBlog',
+			}
 		],
 	},
 
