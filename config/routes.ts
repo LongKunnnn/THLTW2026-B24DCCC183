@@ -125,7 +125,12 @@ export default [
 				path: '/quan-ly/personalblog',
 				name: 'Blog cá nhân',
 				component: './PersonalBlog',
-			}
+			},
+			{
+				path: '/quan-ly/kanban-board',
+				name: 'Bảng Kanban',
+				component: './KanbanBoard',
+			},
 		],
 	},
 
