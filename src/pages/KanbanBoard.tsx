@@ -24,7 +24,6 @@ import moment from 'moment';
 const { Option } = Select;
 const { TextArea } = Input;
 
-// Định nghĩa các cột
 const COLUMNS = {
 	TODO: { id: 'TODO', title: 'Cần làm', color: '#108ee9' },
 	IN_PROGRESS: { id: 'IN_PROGRESS', title: 'Đang làm', color: '#faad14' },
@@ -38,10 +37,8 @@ const KanbanApp: React.FC = () => {
 	const [editingTask, setEditingTask] = useState<any>(null);
 	const [form] = Form.useForm();
 
-	// Hack fix lỗi react-beautiful-dnd trên React 18 Strict Mode
 	const [isBrowser, setIsBrowser] = useState(false);
 
-	// Load dữ liệu từ LocalStorage khi khởi chạy (Yêu cầu 5)
 	useEffect(() => {
 		setIsBrowser(true);
 		const savedTasks = localStorage.getItem('th09_kanban_tasks');
@@ -50,23 +47,19 @@ const KanbanApp: React.FC = () => {
 		}
 	}, []);
 
-	// Lưu dữ liệu xuống LocalStorage mỗi khi tasks thay đổi
 	useEffect(() => {
 		localStorage.setItem('th09_kanban_tasks', JSON.stringify(tasks));
 	}, [tasks]);
 
-	// === LOGIC THỐNG KÊ (DASHBOARD) ===
 	const totalTasks = tasks.length;
 	const completedTasks = tasks.filter((t) => t.status === 'DONE').length;
 	const overdueTasks = tasks.filter((t) => t.status !== 'DONE' && moment(t.deadline).isBefore(moment(), 'day')).length;
 
-	// === LOGIC KÉO THẢ KANBAN BOARD ===
 	const onDragEnd = (result: any) => {
 		if (!result.destination) return;
 		const { source, destination } = result;
 
 		if (source.droppableId !== destination.droppableId) {
-			// Đổi cột
 			const updatedTasks = tasks.map((task) => {
 				if (task.id === result.draggableId) {
 					return { ...task, status: destination.droppableId };
@@ -78,7 +71,6 @@ const KanbanApp: React.FC = () => {
 		}
 	};
 
-	// === LOGIC QUẢN LÝ TASK (THÊM/SỬA/XÓA) ===
 	const handleSaveTask = (values: any) => {
 		const formattedValues = {
 			...values,
@@ -110,7 +102,6 @@ const KanbanApp: React.FC = () => {
 		setIsModalVisible(true);
 	};
 
-	// Cột cho Table Ant Design
 	const tableColumns = [
 		{
 			title: 'Tên công việc',
