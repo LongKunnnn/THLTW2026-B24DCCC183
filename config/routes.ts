@@ -122,6 +122,11 @@ export default [
 				component: './OderManagement',
 			},
 			{
+				path: '/quan-ly/fitness-tracker',
+				name: 'Theo dõi sức khỏe',
+				component: './FitnessTracker',
+			},
+			{
 				path: '/quan-ly/personalblog',
 				name: 'Blog cá nhân',
 				component: './PersonalBlog',
